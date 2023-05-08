@@ -1,5 +1,17 @@
+<!-- http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20 -->
+```
+    __                       
+    \ \                      
+     \ \  _  ___  _   _ _  __
+      > \| |/ _ \| | | | |/ /
+     / ^ \ ( (_) ) |_| |   < 
+    /_/ \_\_)___/ \___/|_|\_\
+
+```
 ![Ilias' GitHub stats](https://github-readme-stats.vercel.app/api?username=liouk&hide=stars,issues&show_icons=true&theme=calm&hide_rank=true&disable_animations=true)
 ![Ilias' GitHub language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=liouk&theme=calm&disable_animations=true&layout=compact)
+
+![Metrics](https://metrics.lecoq.io/liouk?template=classic&languages=1&languages.ignored=html%2C%20css&languages.limit=8&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.details=percentage&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&config.timezone=Europe%2FZurich)
 
 <p>
 <!-- repos -->
