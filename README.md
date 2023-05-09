@@ -8,11 +8,6 @@
     /_/ \_\_)___/ \___/|_|\_\
 
 ```
-![Ilias' GitHub stats](https://github-readme-stats.vercel.app/api?username=liouk&hide=stars,issues&show_icons=true&theme=calm&hide_rank=true&disable_animations=true)
-![Ilias' GitHub language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=liouk&theme=calm&disable_animations=true&layout=compact)
-
-![Metrics](https://metrics.lecoq.io/liouk?template=classic&languages=1&languages.ignored=html%2C%20css&languages.limit=8&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.details=percentage&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&config.timezone=Europe%2FZurich)
-
 <p>
 <!-- repos -->
 <!-- alternative link via search: https://github.com/search?q=is%3Apublic+user%3Aliouk&type=repositories -->
@@ -31,3 +26,7 @@
 <!-- Reviews:  -->
 <a href="https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3Aliouk&type=issues"><img src="https://img.shields.io/static/v1?label=Reviews&message=5&labelColor=grey&color=FF9E3B&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMS43NSAxaDEyLjVjLjk2NiAwIDEuNzUuNzg0IDEuNzUgMS43NXY4LjVBMS43NSAxLjc1IDAgMCAxIDE0LjI1IDEzSDguMDYxbC0yLjU3NCAyLjU3M0ExLjQ1OCAxLjQ1OCAwIDAgMSAzIDE0LjU0M1YxM0gxLjc1QTEuNzUgMS43NSAwIDAgMSAwIDExLjI1di04LjVDMCAxLjc4NC43ODQgMSAxLjc1IDFaTTEuNSAyLjc1djguNWMwIC4xMzguMTEyLjI1LjI1LjI1aDJhLjc1Ljc1IDAgMCAxIC43NS43NXYyLjE5bDIuNzItMi43MmEuNzQ5Ljc0OSAwIDAgMSAuNTMtLjIyaDYuNWEuMjUuMjUgMCAwIDAgLjI1LS4yNXYtOC41YS4yNS4yNSAwIDAgMC0uMjUtLjI1SDEuNzVhLjI1LjI1IDAgMCAwLS4yNS4yNVptNS4yOCAxLjcyYS43NS43NSAwIDAgMSAwIDEuMDZMNS4zMSA3bDEuNDcgMS40N2EuNzUxLjc1MSAwIDAgMS0uMDE4IDEuMDQyLjc1MS43NTEgMCAwIDEtMS4wNDIuMDE4bC0yLTJhLjc1Ljc1IDAgMCAxIDAtMS4wNmwyLTJhLjc1Ljc1IDAgMCAxIDEuMDYgMFptMi40NCAwYS43NS43NSAwIDAgMSAxLjA2IDBsMiAyYS43NS43NSAwIDAgMSAwIDEuMDZsLTIgMmEuNzUxLjc1MSAwIDAgMS0xLjA0Mi0uMDE4Ljc1MS43NTEgMCAwIDEtLjAxOC0xLjA0MkwxMC42OSA3IDkuMjIgNS41M2EuNzUuNzUgMCAwIDEgMC0xLjA2WiI+PC9wYXRoPjwvc3ZnPgo="></a>
 </p>
+
+![Ilias' GitHub language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=liouk&theme=calm&disable_animations=true&layout=compact)
+
+![Metrics](https://metrics.lecoq.io/liouk?template=classic&languages=1&languages.ignored=html%2C%20css&languages.limit=8&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.details=percentage&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&config.timezone=Europe%2FZurich)
