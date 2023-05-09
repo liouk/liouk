@@ -36,7 +36,18 @@
 </td>
 
 <td>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=liouk&theme=github_dark_dimmed&disable_animations=true&layout=compact">
+<p align="left">
+<!-- TODO calculate top 5 used languages -->
+<img src="https://img.shields.io/static/v1?label=Shell&message=75.99%&labelColor=grey&color=658594&style=flat-square">
+<br />
+<img src="https://img.shields.io/static/v1?label=Lua&message=14.13%&labelColor=grey&color=C34043&style=flat-square">
+<br />
+<img src="https://img.shields.io/static/v1?label=Go&message=3.81%&labelColor=grey&color=76946A&style=flat-square">
+<br />
+<img src="https://img.shields.io/static/v1?label=Python&message=3.44%&labelColor=grey&color=957FB8&style=flat-square">
+<br />
+<img src="https://img.shields.io/static/v1?label=Ruby&message=2.63%&labelColor=grey&color=FF9E3B&style=flat-square">
+</p>
 </td>
 
 </tr>
