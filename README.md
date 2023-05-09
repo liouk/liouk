@@ -23,6 +23,7 @@
 </td>
 
 <td>
+<p align="left">
 <!-- https://fsymbols.com/generators/carty/ -->
 
 ```
@@ -33,6 +34,7 @@
 ┃┗┫┃┗┛┃┗┛┃┏┓┓
 ┗━┻┻━━┻━━┻┛┗┛
 ```
+  </p>
 </td>
 
 <td>
