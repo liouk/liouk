@@ -1,0 +1,57 @@
+<!--
+  Generated with https://github.com/liouk/gh-stats
+
+  Resources:
+    * language icons: https://devicon.dev/
+    * ASCII art: https://fsymbols.com/generators/carty/
+-->
+
+<table align="center">
+<tr>
+
+<td>
+<p align="right">
+{{- /* Repos */ -}}
+<a href="https://github.com/{{.User}}?tab=repositories&q=&type=source&language=&sort="><img src="https://img.shields.io/static/v1?label=Repos&message={{.NumRepos}}&labelColor=grey&color=658594&style=flat-square&logo={{index .Extras "repoLogo"}}"></a>
+<br />
+{{- /* Forks */ -}}
+<a href="https://github.com/{{.User}}?tab=repositories&q=&type=fork&language=&sort="><img src="https://img.shields.io/static/v1?label=Forks&message={{.NumForks}}&labelColor=grey&color=C34043&style=flat-square&logo={{index .Extras "forkLogo"}}"></a>
+<br />
+{{- /* Pulls */ -}}
+<a href="https://github.com/search?q=is%3Apublic+author%3A{{.User}}+type%3Apr&type=Issues"><img src="https://img.shields.io/static/v1?label=PRs&message={{.NumPulls}}&labelColor=grey&color=76946A&style=flat-square&logo={{index .Extras "pullLogo"}}"></a>
+<br />
+{{- /* Commits */ -}}
+<a href="https://github.com/search?q=author%3A{{.User}}+is%3Apublic+&type=commits&s=author-date&o=desc"><img src="https://img.shields.io/static/v1?label=Commits&message={{.NumCommits}}&labelColor=grey&color=957FB8&style=flat-square&logo={{index .Extras "commitLogo"}}"></a>
+<br />
+{{- /* Reviews */ -}}
+<a href="https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3A{{.User}}&type=issues"><img src="https://img.shields.io/static/v1?label=Reviews&message={{.NumReviews}}&labelColor=grey&color=FF9E3B&style=flat-square&logo={{index .Extras "reviewLogo"}}"></a>
+</p>
+</td>
+
+<td>
+<p align="left">
+
+```
+┏┓╋╋╋╋╋╋╋┏┓
+┃┃╋╋╋╋╋╋╋┃┃
+┃┃┏┳━━┳┓┏┫┃┏┓
+┃┃┣┫┏┓┃┃┃┃┗┛┛
+┃┗┫┃┗┛┃┗┛┃┏┓┓
+┗━┻┻━━┻━━┻┛┗┛
+```
+</p>
+</td>
+
+<td>
+<p align="left">
+{{- range .Languages }}
+<a href="https://github.com/search?q=is%3Apublic+user%3A{{$.User}}+language%3A{{.Name}}&type=repositories">
+<img title="{{.Name}}" src="https://img.shields.io/static/v1?label=&message={{printf "%.2f" .Perc}}%&labelColor={{index (index $.Extras "langColors") .Name}}&color=grey&style=flat-square&logo={{index (index $.Extras "langLogos") .Name}}">
+</a>
+<br />
+{{- end }}
+</p>
+</td>
+
+</tr>
+</table>
