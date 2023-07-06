@@ -20,6 +20,14 @@ main () {
     esac
   done
 
+  # prompt for GITHUB_TOKEN if unset
+  GITHUB_TOKEN=
+  if [ -z "$GITHUB_TOKEN" ]; then
+    read -p "GITHUB_TOKEN: " -s GITHUB_TOKEN
+    echo
+    export GITHUB_TOKEN
+  fi
+
   # if README.md is dirty, exit or discard changes if --force is used
   if ! git diff --quiet README.md; then
     if [ -n "$FORCE" ]; then
