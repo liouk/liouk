@@ -30,22 +30,23 @@ main () {
 
   # if README.md is dirty, exit or discard changes if --force is used
   if ! git diff --quiet README.md; then
-    if [ -n "$FORCE" ]; then
-      echo "README.md has changes; forcing discard"
-      git checkout README.md
-    else
-      echo "README.md has changes; abort"
-      exit 1
-    fi
+    echo "README.md has changes; abort"
+    exit 1
   fi
 
   echo "generating stats in README.md"
 	gh-stats all --template templates/README.md.tmpl --template-extras templates/README-extras.json --output README.md
 
-  if git diff --quiet README.md; then
-    echo "no new stats calculated; README.md unchanged"
-    return
+  if [ -z "$FORCE" ]; then
+    if git diff --quiet README.md; then
+      echo "no new stats calculated; README.md unchanged"
+      return
+    fi
   fi
+
+  num=$(/bin/ls -1 assets/liouk-logos| wc -l)
+  liouk_logo="liouk-$(( $RANDOM % $num )).png"
+  sed -i "s/liouk.png/${liouk_logo}/" README.md
 
   echo "README.md updated"
   [ -n "$PUBLISH" ] || return
