@@ -21,7 +21,7 @@
 <td>
 <p align="left">
 <!-- Logo generated with: https://codepo8.github.io/logo-o-matic/#goto-orc -->
-<a href="https://github.com/liouk"><img src="assets/liouk-1.png" alt="liouk" title="liouk"></a>
+<a href="https://github.com/liouk"><img src="assets/liouk-logos/liouk-5.png" alt="liouk" title="liouk"></a>
 </p>
 </td>
 
