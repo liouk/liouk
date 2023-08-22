@@ -20,15 +20,8 @@
 
 <td>
 <p align="left">
-
-```
-┏┓╋╋╋╋╋╋╋┏┓
-┃┃╋╋╋╋╋╋╋┃┃
-┃┃┏┳━━┳┓┏┫┃┏┓
-┃┃┣┫┏┓┃┃┃┃┗┛┛
-┃┗┫┃┗┛┃┗┛┃┏┓┓
-┗━┻┻━━┻━━┻┛┗┛
-```
+<!-- Logo generated with: https://codepo8.github.io/logo-o-matic/#goto-orc -->
+<a href="https://github.com/liouk"><img src="assets/liouk.png" alt="liouk" title="liouk"></a>
 </p>
 </td>
 
