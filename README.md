@@ -7,6 +7,7 @@
   liouk@github:~$ whoami
 
   ┃   senior engineer @ <a href="https://www.redhat.com">Red Hat</a> · <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">OpenShift</a> Control Plane
+  ┃   email: <a href="mailto:hello@liouk.dev">hello@liouk.dev</a>
 
   liouk@github:~$ ./github-stats.sh
 
@@ -16,8 +17,8 @@
   ┃   * <a href="https://github.com/search?q=author%3Aliouk+is%3Apublic+&type=commits&s=author-date&o=desc">commits</a> ....... 1511
   ┃   * <a href="https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3Aliouk&type=issues">reviews</a> ........ 248
   ┃
-  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AShell&type=repositories">shell</a>    [■■■■■■■■■■■··········]  53.94%
-  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AGo&type=repositories">go</a>       [■■■■■■■··············]  35.44%
+  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AShell&type=repositories">shell</a>    [■■■■■■■■■■■··········]  53.95%
+  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AGo&type=repositories">go</a>       [■■■■■■■··············]  35.43%
   ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3ALua&type=repositories">lua</a>      [■····················]   7.00%
   ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3APython&type=repositories">python</a>   [■····················]   1.31%
   ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3ARuby&type=repositories">ruby</a>     [■····················]   1.21%
