@@ -152,6 +152,7 @@ HEADER
     printf '  %s@github:~$ whoami\n' "$USER"
     echo
     echo '  ┃   senior engineer @ <a href="https://www.redhat.com">Red Hat</a> · <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">OpenShift</a> Control Plane'
+    echo '  ┃   email: <a href="mailto:hello@liouk.dev">hello@liouk.dev</a>'
     echo
     printf '  %s@github:~$ ./github-stats.sh\n' "$USER"
     echo
