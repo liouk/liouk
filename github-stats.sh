@@ -45,13 +45,15 @@ main() {
 
   git add docs/index.html
   git config user.name "github-actions"
-  git config user.email "noreply@github.com"
+  git config user.email "1769158+liouk@users.noreply.github.com"
   git add README.md
   git commit -m 'Update stats'
   git push
 }
 
 fetch_stats() {
+  FULL_NAME=$(gh api "users/${USER}" -q '.name')
+
   NUM_REPOS=$(gh api graphql \
     -f query='{
       user(login:"'"$USER"'") {
@@ -107,6 +109,26 @@ stat_line() {
   printf '  ┃   * <a href="%s">%s</a> %s %s\n' "$url" "$name" "$dots" "$value"
 }
 
+card_stat_line() {
+  local name="$1" url="$2" value="$3"
+  local ndots=$((18 - ${#name} - ${#value}))
+  [ "$ndots" -lt 3 ] && ndots=3
+  local dots=$(printf '%*s' "$ndots" '' | tr ' ' '.')
+  printf '<span class="bar">┃</span>   * <a href="%s">%s</a> <span class="muted">%s</span> <span class="stat-val">%s</span>\n' "$url" "$name" "$dots" "$value"
+}
+
+card_pulls_line() {
+  local pr_search="https://github.com/search?q=is%3Apublic+author%3A${USER}+type%3Apr"
+  local ndots=$((18 - 5 - ${#NUM_PULLS}))
+  [ "$ndots" -lt 3 ] && ndots=3
+  local dots=$(printf '%*s' "$ndots" '' | tr ' ' '.')
+  printf '<span class="bar">┃</span>   * <a href="%s&type=Issues">pulls</a> <span class="muted">%s</span> <span class="stat-val">%s</span> (<a href="%s+is%%3Amerged">%s merged</a> / <a href="%s+is%%3Aopen">%s open</a> / <a href="%s+is%%3Aclosed+is%%3Aunmerged">%s closed</a>)\n' \
+    "$pr_search" "$dots" "$NUM_PULLS" \
+    "$pr_search" "$NUM_MERGED_PULLS" \
+    "$pr_search" "$NUM_OPEN_PULLS" \
+    "$pr_search" "$NUM_CLOSED_PULLS"
+}
+
 lang_line() {
   local name="$1" url="$2" perc="$3"
   local name_lower=$(echo "$name" | tr '[:upper:]' '[:lower:]')
@@ -156,7 +178,7 @@ HEADER
     echo
     echo '  ┃   senior engineer @ <a href="https://www.redhat.com">Red Hat</a> · <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">OpenShift</a> Control Plane'
     echo '  ┃   email: <a href="mailto:hello@liouk.dev">hello@liouk.dev</a>'
-    echo '  ┃   code:  <a href="https://github.com/liouk">github</a> · <a href="https://gitlab.com/liouk">gitlab</a>'
+    echo '  ┃   code:  <a href="https://github.com/liouk">github</a>'
     echo
     printf '  %s@github:~$ ./github-stats.sh\n' "$USER"
     echo
@@ -171,11 +193,11 @@ HEADER
     local ndots=$((18 - 5 - ${#NUM_PULLS}))
     [ "$ndots" -lt 3 ] && ndots=3
     local dots=$(printf '%*s' "$ndots" '' | tr ' ' '.')
-    printf '  ┃   * <a href="%s&type=Issues">pulls</a> %s %s (<a href="%s+is%%3Aopen">%s open</a> / <a href="%s+is%%3Aclosed+is%%3Aunmerged">%s closed</a> / <a href="%s+is%%3Amerged">%s merged</a>)\n' \
+    printf '  ┃   * <a href="%s&type=Issues">pulls</a> %s %s (<a href="%s+is%%3Amerged">%s merged</a> / <a href="%s+is%%3Aopen">%s open</a> / <a href="%s+is%%3Aclosed+is%%3Aunmerged">%s closed</a>)\n' \
       "$pr_search" "$dots" "$NUM_PULLS" \
+      "$pr_search" "$NUM_MERGED_PULLS" \
       "$pr_search" "$NUM_OPEN_PULLS" \
-      "$pr_search" "$NUM_CLOSED_PULLS" \
-      "$pr_search" "$NUM_MERGED_PULLS"
+      "$pr_search" "$NUM_CLOSED_PULLS"
     stat_line "commits" \
       "https://github.com/search?q=author%3A${USER}+is%3Apublic+&type=commits&s=author-date&o=desc" \
       "$NUM_COMMITS"
@@ -250,8 +272,6 @@ generate_card() {
 "
   done <<< "$lang_lines"
 
-  local pr_search="https://github.com/search?q=is%3Apublic+author%3A${USER}+type%3Apr"
-
   cat > "$CARD_OUTPUT" <<CARD_EOF
 <!DOCTYPE html>
 <html lang="en">
@@ -288,6 +308,12 @@ generate_card() {
     border: 3px solid #ff79c6;
     box-shadow: 0 0 20px rgba(255, 121, 198, 0.3);
   }
+  .name {
+    color: #f8f8f2;
+    font-size: 18px;
+    margin-top: 12px;
+    font-weight: 700;
+  }
   .terminal {
     background: #0d0d1a;
     border: 2px solid #44475a;
@@ -297,7 +323,7 @@ generate_card() {
   .content {
     padding: 24px;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.4;
     color: #f8f8f2;
     white-space: pre;
     overflow-x: auto;
@@ -318,6 +344,7 @@ generate_card() {
 <div class="card">
   <div class="avatar">
     <img src="https://github.com/${USER}.png" alt="${USER}">
+    <div class="name">${FULL_NAME}</div>
   </div>
   <div class="terminal">
     <div class="content">
@@ -325,15 +352,15 @@ generate_card() {
 
 <span class="bar">┃</span>   senior engineer @ <a href="https://www.redhat.com">Red Hat</a> · <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">OpenShift</a> Control Plane
 <span class="bar">┃</span>   email: <a href="mailto:hello@liouk.dev">hello@liouk.dev</a>
-<span class="bar">┃</span>   code:  <a href="https://github.com/liouk">github</a> · <a href="https://gitlab.com/liouk">gitlab</a>
+<span class="bar">┃</span>   code:  <a href="https://github.com/liouk">github</a>
 
 <span class="prompt">${USER}@liouk.dev:~\$</span> ./github-stats.sh
 
-<span class="bar">┃</span>   * <a href="https://github.com/${USER}?tab=repositories&q=&type=source&language=&sort=">repos</a> <span class="muted">...........</span> <span class="stat-val">${NUM_REPOS}</span>
-<span class="bar">┃</span>   * <a href="https://github.com/${USER}?tab=repositories&q=&type=fork&language=&sort=">forks</a> <span class="muted">...........</span> <span class="stat-val">${NUM_FORKS}</span>
-<span class="bar">┃</span>   * <a href="${pr_search}&type=Issues">pulls</a> <span class="muted">..........</span> <span class="stat-val">${NUM_PULLS}</span> (<a href="${pr_search}+is%3Aopen">${NUM_OPEN_PULLS} open</a> / <a href="${pr_search}+is%3Aclosed+is%3Aunmerged">${NUM_CLOSED_PULLS} closed</a> / <a href="${pr_search}+is%3Amerged">${NUM_MERGED_PULLS} merged</a>)
-<span class="bar">┃</span>   * <a href="https://github.com/search?q=author%3A${USER}+is%3Apublic+&type=commits&s=author-date&o=desc">commits</a> <span class="muted">.........</span> <span class="stat-val">${NUM_COMMITS}</span>
-<span class="bar">┃</span>   * <a href="https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3A${USER}&type=issues">reviews</a> <span class="muted">.........</span> <span class="stat-val">${NUM_REVIEWS}</span>
+$(card_stat_line "repos" "https://github.com/${USER}?tab=repositories&q=&type=source&language=&sort=" "$NUM_REPOS")
+$(card_stat_line "forks" "https://github.com/${USER}?tab=repositories&q=&type=fork&language=&sort=" "$NUM_FORKS")
+$(card_pulls_line)
+$(card_stat_line "commits" "https://github.com/search?q=author%3A${USER}+is%3Apublic+&type=commits&s=author-date&o=desc" "$NUM_COMMITS")
+$(card_stat_line "reviews" "https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3A${USER}&type=issues" "$NUM_REVIEWS")
 <span class="bar">┃</span>
 ${lang_bars}
 <span class="prompt">${USER}@liouk.dev:~\$</span> ./interests.sh
