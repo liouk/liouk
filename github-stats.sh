@@ -193,9 +193,9 @@ HEADER
     echo
     printf '  %s@github:~$ ./interests.sh\n' "$USER"
     echo
-    echo '  ┃   go · shell · git · dev tooling · agentic SDLC'
-    echo '  ┃   kubernetes · openshift · linux · docker · cloud native'
-    echo '  ┃   open source · software/web security'
+    echo '  ┃   go · shell · git · dev tooling'
+    echo '  ┃   linux · containers · kubernetes · cloud native'
+    echo '  ┃   open source · software/web security · agentic SDLC'
     echo
     echo '</pre>'
   } > "$OUTPUT"
