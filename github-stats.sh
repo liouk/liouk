@@ -217,7 +217,7 @@ HEADER
     done <<< "$lang_lines"
 
     echo
-    printf '  %s@github:~$ ./interests.sh\n' "$USER"
+    printf '  %s@github:~$ cat ~/about/interests.txt\n' "$USER"
     echo
     echo '  ┃   go · shell · git · dev tooling'
     echo '  ┃   linux · containers · kubernetes · cloud native'
@@ -363,7 +363,7 @@ $(card_stat_line "commits" "https://github.com/search?q=author%3A${USER}+is%3Apu
 $(card_stat_line "reviews" "https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3A${USER}&type=issues" "$NUM_REVIEWS")
 <span class="bar">┃</span>
 ${lang_bars}
-<span class="prompt">${USER}@liouk.dev:~\$</span> ./interests.sh
+<span class="prompt">${USER}@liouk.dev:~\$</span> cat ~/about/interests.txt
 
 <span class="bar">┃</span>   go · shell · git · dev tooling
 <span class="bar">┃</span>   linux · containers · kubernetes · cloud native
