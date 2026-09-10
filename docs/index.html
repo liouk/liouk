@@ -4,10 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>liouk</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: 'Maple Mono';
+    src: url('fonts/MapleMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Maple Mono';
+    src: url('fonts/MapleMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     background: #0d0d1a;
@@ -15,11 +26,11 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Maple Mono', monospace;
     padding: 20px;
   }
   .card {
-    max-width: 680px;
+    max-width: 900px;
     width: 100%;
   }
   .avatar {
@@ -47,7 +58,7 @@
   }
   .content {
     padding: 24px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.4;
     color: #f8f8f2;
     white-space: pre;
@@ -60,7 +71,7 @@
   .stat-val { color: #f8f8f2; }
   .muted { color: #6272a4; }
   @media (max-width: 500px) {
-    .content { font-size: 11px; padding: 16px; }
+    .content { font-size: 15px; padding: 16px; }
     .avatar img { width: 80px; height: 80px; }
   }
 </style>
