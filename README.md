@@ -14,15 +14,15 @@
 
   ┃   * <a href="https://github.com/liouk?tab=repositories&q=&type=source&language=&sort=">repos</a> ........... 14
   ┃   * <a href="https://github.com/liouk?tab=repositories&q=&type=fork&language=&sort=">forks</a> ........... 63
-  ┃   * <a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr&type=Issues">pulls</a> .......... 234 (<a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr+is%3Amerged">152 merged</a> / <a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr+is%3Aopen">9 open</a> / <a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr+is%3Aclosed+is%3Aunmerged">73 closed</a>)
-  ┃   * <a href="https://github.com/search?q=author%3Aliouk+is%3Apublic+&type=commits&s=author-date&o=desc">commits</a> ....... 1750
-  ┃   * <a href="https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3Aliouk&type=issues">reviews</a> ........ 291
+  ┃   * <a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr&type=Issues">pulls</a> .......... 235 (<a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr+is%3Amerged">154 merged</a> / <a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr+is%3Aopen">7 open</a> / <a href="https://github.com/search?q=is%3Apublic+author%3Aliouk+type%3Apr+is%3Aclosed+is%3Aunmerged">74 closed</a>)
+  ┃   * <a href="https://github.com/search?q=author%3Aliouk+is%3Apublic+&type=commits&s=author-date&o=desc">commits</a> ....... 1763
+  ┃   * <a href="https://github.com/search?q=is%3Apublic+type%3Apr+assignee%3Aliouk&type=issues">reviews</a> ........ 292
   ┃
-  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AShell&type=repositories">shell</a>    [■■■■■■■■■■■··········]  52.47%
-  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AGo&type=repositories">go</a>       [■■■■■■■■·············]  37.78%
-  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3ALua&type=repositories">lua</a>      [■····················]   5.26%
-  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3ARuby&type=repositories">ruby</a>     [■····················]   0.90%
-  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3APython&type=repositories">python</a>   [■····················]   0.36%
+  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AShell&type=repositories">shell</a>    [■■■■■■■■■■■··········]  52.39%
+  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3AGo&type=repositories">go</a>       [■■■■■■■■·············]  37.84%
+  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3ALua&type=repositories">lua</a>      [■····················]   5.27%
+  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3ARuby&type=repositories">ruby</a>     [■····················]   0.91%
+  ┃   <a href="https://github.com/search?q=is%3Apublic+user%3Aliouk+language%3APython&type=repositories">python</a>   [■····················]   0.37%
 
   liouk@github:~$ cat ~/about/interests.txt
 
